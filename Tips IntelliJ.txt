@@ -1,0 +1,63 @@
+
+ctrl + n = busca    nomeclass:34(numero da linha)
+shift + 10 = executar
+ctrl + v = entrar na classe selecionada
+alt + seta (<- ->) = navegar entre tabs
+ctrl + f4 = frachar tab atual
+alt + shift + x = fechar todas as abas
+ctrl + shift + f12 = expandir
+f5 = copiar class
+ctrl + alt + l = identar
+shift + f6 = renomear 
+ctrl + alt + m = extrair metodo
+alt + shift = mover linhar 
+ctrl + shift = mover apenas dentro do metodo
+ctrl + y = remover codigo
+alt + enter = sugestões 
+
+shift + shift = buscar em todo projeto
+ctrl + shift + a = 
+
+busca avançada
+diretorio/tipoArquivo extensão
+
+ctrl + shift + f = busca por texto
+ctrl + f12 = mostra estrutura da class
+alt + f7 = verificar onde ta usando o metodo
+ctrl + h = hierarquia da class
+alt + home = abas das pastas 
+
+ctrl + alt + shitf + t = Opões de refatorar
+ctrl + shift + f6 = mudar o tipo 
+alt + insert = em cima da pasta criar arquivo
+ctrl + shitp + alt + s = configurar pacotes
+ctrl + shift + f10 = executar junit
+ctrl + w = seleciona todo o metodo
+alt + shift + f9 = executar debug
+
+DEBUG
+f7 = avançar passo a passo
+f8 = passar linha a linha
+shift + f8 = passar passo
+alt + f9 = para onde ta o cursor
+alt + f8 = abre console de pesquisa
+
+ctrl + / = comentar codigo
+new nomevariavel().var + tab = cria var local === ctrl + alt + v;
+		  .fie + tab = criar field === ctrl + alt + f;
+                  .con + tab = criar const === ctrl + alt + c;
+
+ctrl + alt + t = adicionar codigo dentro de um if ex...
+. ctrl + j = mostra todos os templates 
+ctrl + alt + o = limpar imports
+
+live templates = 
+
+
+ 
+
+
+
+
+
+
