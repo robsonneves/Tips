@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> nav </title>
+
+	<style type="text/css">
+
+		@font-face {
+		    font-family: sillii_willinn;
+		    src: url('font/sillii_willinn/Sillii Willinn Font.ttf');
+		}
+		@font-face {
+		    font-family: latters_for_learners;
+		    src: url('font/letters_for_learners/Letters for Learners.ttf');
+		}
+		body{
+			display: flex;
+			width: 100%;
+			margin: 0px;
+		}
+
+		/* MENU */
+		nav {
+			display: flex;
+			width: 100%;
+			min-height: 10vh;
+			padding-left: 2em;
+			padding-right: 2em;
+			background-image: url('img/textura_nav.png');
+		}
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		.ativo {
+			transform: rotate(-20deg);
+			color: red; 
+		}
+		#logo {
+			flex-grow: 1;
+		}
+		.logo {
+			font-family: sillii_willinn;
+			font-size: 3em;
+		}
+		#menu {
+			display: flex;
+			flex-grow: 2;
+		}
+		#menu ul {
+			list-style-type: none;
+			height: 100%;
+		}
+		#menu ul li {
+			padding: 3vh;
+			font-family: latters_for_learners;
+			font-size: 1.5em;
+		}
+
+		/* Geral Posicionamento */
+		.centralizar-centralizar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.row {
+			display: flex;
+			flex-direction: row;
+			flex-flow: row wrap;
+		}
+		
+
+
+		.parallelogram { 
+			width: auto; 
+			height: auto; 
+			transform: skew(-20deg); 
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+		} 
+
+		.circle { 
+			width: 100px; 
+			height: 100px; 
+			background: red; 
+			border-radius: 50%
+		} 
+
+		.linhaAtiva {
+			height: 8px;
+		    border: 0;
+		    height: 2px;
+		    background-image: linear-gradient(90deg, red, transparent);
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<nav>
+		<div id="logo" class="centralizar-centralizar">
+			<h1 class="logo"> Logo Tipo </h1>
+		</div>
+		<div id="menu" class="centralizar-centralizar">
+			<ul class="row centralizar-centralizar">
+				<li><a href="#" class="ativo">HOME</a></li>
+				<li><a href="#">SERVIÇOS</a></li>
+				<li><a href="#">PERFIL</a></li>
+				<li><a href="#">CONTATO</a></li>
+			</ul>
+		</div>	
+	</nav>
+
+</body>
+</html>
