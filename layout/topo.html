@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> nav </title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<nav>
+		<div id="logo" class="centralizar-centralizar">
+			<h1 class="logo"> R. N. Rodrigues </h1>
+		</div>
+		<div id="menu" class="centralizar-centralizar">
+			<ul class="row centralizar-centralizar">
+				<li><a href="#" class="ativo">HOME</a></li>
+				<li><a href="#">SERVIÇOS</a></li>
+				<li><a href="#">PERFIL</a></li>
+				<li><a href="#">CONTATO</a></li>
+			</ul>
+		</div>	
+	</nav>
+
+	<section>
+		<div id="topo">
+			<h1 id="titulo"></h1>
+			<br>	
+		</div>
+	</section>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('ul > li > a').click(function(){
+			$('ul > li').each(function(){
+				$('li > a').removeClass('ativo');
+			});
+			$(this).addClass('ativo');
+		});
+
+
+
+
+
+		var txtTitulo = 'Seja bem Vinda(o)';
+		var txt1 = document.getElementById("titulo");
+
+		var speed = 130; 
+		var cont = 0;
+
+		function typeWriter (msg, tag) {
+
+		  	if(cont < msg.length){
+
+		    	tag.innerHTML += msg.charAt(cont);
+		    	cont++;
+
+		    	setTimeout(function(){
+		    		typeWriter(msg, tag);
+		    	}, speed);
+		  	}else{
+		    	tag.innerHTML += "<span>_</span>";
+		  	}
+
+		}
+
+		typeWriter(txtTitulo, txt1);
+
+	</script>
+
+</body>
+</html>

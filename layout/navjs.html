@@ -23,5 +23,15 @@
 		</div>	
 	</nav>
 
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('ul > li > a').click(function(){
+			$('ul > li').each(function(){
+				$('li > a').removeClass('ativo');
+			});
+			$(this).addClass('ativo');
+		});
+	</script>
+
 </body>
 </html>
