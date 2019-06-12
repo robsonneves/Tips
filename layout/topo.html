@@ -27,6 +27,8 @@
 		<div id="topo">
 			<h1 id="titulo"></h1>
 			<br>	
+			<h1 id="msg"></h1>
+			<br>
 		</div>
 	</section>
 
@@ -42,13 +44,42 @@
 
 
 
-
-		var txtTitulo = 'Seja bem Vinda(o)';
+		var txtTitulo = 'Seja bem Vinda(o), Eu sou Robson, em que posso ajudar ?';
 		var txt1 = document.getElementById("titulo");
+		
+		var txtTitulo2 = 'Seja bem Vinda(o) 2, em que posso ajuda-lo!!!';
+		var txt2 = document.getElementById("titulo");
 
 		var speed = 130; 
 		var cont = 0;
 
+
+		maquinaEscrever(txtTitulo2, txt2)
+
+		function maquinaEscrever(msg, tag){
+			msg = msg.split(',');
+			var i = 0;
+			msg.forEach(function(m){
+				var letras = m.split('');
+
+				letras.forEach(function(l){
+				
+					//tag.innerHTML = l;
+
+					//$("#msg").append(l).fadeIn(2000).delay(5000);
+					$("#msg").append(l);
+
+
+				}); 
+
+
+
+			});
+
+
+		}
+
+		/*
 		function typeWriter (msg, tag) {
 
 		  	if(cont < msg.length){
@@ -56,16 +87,28 @@
 		    	tag.innerHTML += msg.charAt(cont);
 		    	cont++;
 
+		    	cont == 18 ? tag.innerHTML += "</br>": tag.innerHTML; 
+		    	cont == 40 ? tag.innerHTML += "</br>": tag.innerHTML;
+
 		    	setTimeout(function(){
 		    		typeWriter(msg, tag);
 		    	}, speed);
+
 		  	}else{
-		    	tag.innerHTML += "<span>_</span>";
+		    	tag.innerHTML += "<span id='span-piscando'>_</span>";
+		    	blinkText();
 		  	}
 
-		}
+		}*/
 
-		typeWriter(txtTitulo, txt1);
+		//typeWriter(txtTitulo, txt1);
+
+		function blinkText(){
+			var f = document.getElementById("span-piscando");
+			setInterval(function(){
+				f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+			}, 500)
+		}
 
 	</script>
 
