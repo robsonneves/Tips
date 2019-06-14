@@ -44,64 +44,43 @@
 
 
 
-		var txtTitulo = 'Seja bem Vinda(o), Eu sou Robson, em que posso ajudar ?';
-		var txt1 = document.getElementById("titulo");
+		var txtTitulo = 'Seja bem Vinda(o), Eu sou João, em que posso ajudar ?';
 		
-		var txtTitulo2 = 'Seja bem Vinda(o) 2, em que posso ajuda-lo!!!';
-		var txt2 = document.getElementById("titulo");
+		function verificarMsgs(controlador){
+			let msgs = txtTitulo.split(',');
+			if(msgs.length > controlador){
+				$("#msg").append('<br/>');
+				let msg = msgs[controlador].split('');
+				delay_loop_letras(msg);
+			}else{
+				$('#msg').append('<span id="span-piscando">_</span>');
+        		blinkText();
+			}
+		};
 
-		var speed = 130; 
-		var cont = 0;
+		var controlador = 0;
+		verificarMsgs(controlador);
 
+		function delay_loop_letras(items) {
 
-		maquinaEscrever(txtTitulo2, txt2)
+		    let data = items.shift();
+		    let delay = 200;
 
-		function maquinaEscrever(msg, tag){
-			msg = msg.split(',');
-			var i = 0;
-			msg.forEach(function(m){
-				var letras = m.split('');
+		    setTimeout(()=>{
 
-				letras.forEach(function(l){
-				
-					//tag.innerHTML = l;
+		        for(var i=0, l=data.length; i<l; i++) {
+					$('#msg').append(data[i]);
+		        }
 
-					//$("#msg").append(l).fadeIn(2000).delay(5000);
-					$("#msg").append(l);
+		        if(items.length != 0){
+		        	delay_loop_letras(items)
+		        }else{
+		        	controlador++;
+		        	verificarMsgs(controlador);
+		        }
 
-
-				}); 
-
-
-
-			});
-
-
+		    },delay);
 		}
-
-		/*
-		function typeWriter (msg, tag) {
-
-		  	if(cont < msg.length){
-
-		    	tag.innerHTML += msg.charAt(cont);
-		    	cont++;
-
-		    	cont == 18 ? tag.innerHTML += "</br>": tag.innerHTML; 
-		    	cont == 40 ? tag.innerHTML += "</br>": tag.innerHTML;
-
-		    	setTimeout(function(){
-		    		typeWriter(msg, tag);
-		    	}, speed);
-
-		  	}else{
-		    	tag.innerHTML += "<span id='span-piscando'>_</span>";
-		    	blinkText();
-		  	}
-
-		}*/
-
-		//typeWriter(txtTitulo, txt1);
 
 		function blinkText(){
 			var f = document.getElementById("span-piscando");
