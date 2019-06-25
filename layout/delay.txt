@@ -1,0 +1,56 @@
+var items = [ 
+		    [0, 1, 2],
+		    [3, 4, 5]
+		];
+
+		function delay_loop(items) {
+
+		    var data  = items.shift(),
+		    
+		    // delay between each loop
+	        delay = 2000;
+
+		    // start a delay
+		    setTimeout(()=>{
+
+		        // process array data
+		        for(var i=0, l=data.length; i<l; i++) {
+		            console.log(data[i]);
+		        }
+
+		        // recursive call 
+		        if (items.length)
+		            delay_loop(items)
+
+		    }, delay);
+		}
+
+		delay_loop(items);
+
+
+
+
+
+		var controlador = 0;
+		verificarMsgs(controlador);
+
+		function delay_loop_letras(items) {
+
+		    let data = items.shift();
+		    let delay = 200;
+
+		    setTimeout(()=>{
+
+		        for(var i=0, l=data.length; i<l; i++) {
+					$("#msg").append(data[i]);
+		        }
+
+		        if(items.length != 0){
+		        	delay_loop_letras(items)
+		        }else{
+		        	controlador++;
+		        	verificarMsgs(controlador);
+				}
+
+		    },delay);
+		}
