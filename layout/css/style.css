@@ -1,18 +1,18 @@
-
-
 @font-face {
     font-family: sillii_willinn;
     src: url('../font/sillii_willinn/Sillii Willinn Font.ttf');
 }
+
 @font-face {
     font-family: latters_for_learners;
     src: url('../font/letters_for_learners/Letters for Learners.ttf');
 }
+
 body{
 	margin: 0px;
 }
 
-/* MENU */
+/* MENU - nav */
 nav {
 	display: flex;
 	flex-direction: row;
@@ -22,47 +22,64 @@ nav {
 	padding-right: 2em;
 	background-image: url('../img/textura_nav.png');
 }
+
 a {
 	text-decoration: none;
 	color: black;
 }
-.ativo {
-	display: flex;
-	transform: rotate(-20deg);
-	color: red; 
-}
-#logo {
-	flex-grow: 1;
-}
-.logo {
-	font-family: sillii_willinn;
-	font-size: 3em;
-}
+
 #menu {
 	display: flex;
 	flex-grow: 2;
 }
+
 #menu ul {
 	list-style-type: none;
 	height: 100%;
 }
+
 #menu ul li {
 	padding: 3vh;
 	font-family: latters_for_learners;
 	font-size: 1.5em;
 }
 
+.ativo {
+	display: flex;
+	transform: rotate(-20deg);
+	color: red; 
+}
+
+/* Logo */
+#logo {
+	flex-grow: 1;
+}
+
+.logo {
+	font-family: sillii_willinn;
+	font-size: 3em;
+}
+
+/* topo */
+#sectionTopo {
+	/* 
+	width: 100%;
+	min-height: 70vh;
+	background: repeating-linear-gradient(to bottom right, #FB9292, #FB9292 1px, white 1px, white 20px);
+	background-size : 20px 20px;
+	background-attachment : fixed; 
+	*/ 
+}
+
 #topo {
 	display: flex;
 	align-items: center;
 	background-color: white;
+	min-height: 63vh;
 	margin-left: 23%;
-}
-
-section {
-	display: flex;
-	max-width: 100%;
-	height: 70vh;
+	margin-bottom: 10vh;
+	background: rgb(0, 0, 0) transparent;
+	background: rgba(0, 0, 0, 0.0);
 }
 
 #topo {
@@ -70,20 +87,26 @@ section {
 	font-size: 2em;
 }
 
+/* Skills */
+#skill{
+	display: flex;
+	height: 300px;
+	background-color: green;
+}
+
+
 /* Geral Posicionamento */
 .centralizar-centralizar {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .row {
 	display: flex;
 	flex-direction: row;
 	flex-flow: row wrap;
 }
-
-
-
 
 .parallelogram { 
 	width: auto; 

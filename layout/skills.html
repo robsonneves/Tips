@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> nav </title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<nav>
+		<div id="logo" class="centralizar-centralizar">
+			<h1 class="logo"> R. N. Rodrigues </h1>
+		</div>
+		<div id="menu" class="centralizar-centralizar">
+			<ul class="row centralizar-centralizar">
+				<li><a href="#" class="ativo">HOME</a></li>
+				<li><a href="#">SERVIÇOS</a></li>
+				<li><a href="#">PERFIL</a></li>
+				<li><a href="#">CONTATO</a></li>
+			</ul>
+		</div>	
+	</nav>
+
+	<section>
+		<div id="topo">
+			<h1 id="titulo"></h1>
+			<br>	
+			<h1 id="msg"></h1>
+			<br>
+		</div>
+	</section>
+
+	<section>
+		<div id="skill">
+			<h1>Titulo </h1>
+			<br>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('ul > li > a').click(function(){
+			$('ul > li').each(function(){
+				$('li > a').removeClass('ativo');
+			});
+			$(this).addClass('ativo');
+		});
+
+
+
+
+		var txtTitulo = 'Seja bem Vinda(o), Eu sou João, em que posso ajudar ?';
+		
+		function verificarMsgs(controlador){
+			let msgs = txtTitulo.split(',');
+			if(msgs.length > controlador){
+				$("#msg").append('<br/>');
+				let msg = msgs[controlador].split('');
+				delay_loop_letras(msg);
+			}else{
+				$('#msg').append('<span id="span-piscando">_</span>');
+        		blinkText();
+			}
+		};
+
+		var controlador = 0;
+		verificarMsgs(controlador);
+
+		function delay_loop_letras(items) {
+
+		    let data = items.shift();
+		    let delay = 200;
+
+		    setTimeout(()=>{
+
+		        for(var i=0, l=data.length; i<l; i++) {
+					$('#msg').append(data[i]);
+		        }
+
+		        if(items.length != 0){
+		        	delay_loop_letras(items)
+		        }else{
+		        	controlador++;
+		        	verificarMsgs(controlador);
+		        }
+
+		    },delay);
+		}
+
+		function blinkText(){
+			var f = document.getElementById("span-piscando");
+			setInterval(function(){
+				f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+			}, 500)
+		}
+
+	</script>
+
+</body>
+</html>
