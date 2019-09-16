@@ -1,0 +1,811 @@
+
+=======================================
+	=======================================
+		Python3 - Curso Alura / Parte 1
+	=======================================
+=======================================
+
+## Todos os comandos dentro da console do PYTON ##
+
+função que imprimi.
+	print("valor da impressão", sep="-") adiciona entre os valores
+	print("valor da impressão", and="\n") pula linha
+
+criando variavél 
+	pais = "valorVariavel"
+	quantidade = 4
+
+verifica o tipo da variavél
+	type(var)
+
+
+=======================================================
+	Começando com IDEs (Sublime, Atom, PyCharm)
+=======================================================
+extenção .py
+
+Criando um input
+	nomeVar = input("Digite um input: ")
+
+IF atenção aos (:)
+	if(*****):
+		print(...)
+	else:
+		print(...)
+
+Esse é o else if
+	elif()
+
+Converter string em numero
+	var = int(nomeVar)
+
+Laço 
+
+	total_de_tentativas = 3
+	while(total_de_tentativas > <= == 0):
+		logica....
+		total_de_tentativas = total_de_tentativas - 1
+		total_de_tentativas = total_de_tentativas + 1
+
+Adicionar variavel dentro do print {}
+	varTeste2 = 2
+	varTeste3 = 3
+	print("Aqui é o teste {} e aqui o teste {}".format(varTeste2, varTeste3))
+
+
+Loop FOR
+
+								De um a nove
+	for variavelTeste in range(1, 10, definePular de 2 em 2, 3 em 3):
+ 		...
+
+# break
+# continue
+# and
+# or
+
+"tentativa {1} de  {0}".format(3, 10)
+
+Indicando que o campo é float
+	"R$ {:f}".format(1,59)
+Depois do ponto 2 numeros
+	"R$ {:.2f}".format(1,59)
+Definindo quantidade de caracteres
+	"R$ {:7.2f}".format(1,59)
+	"R$ {:07.2f}".format(1,59)
+Definindo Inteiro
+	"R$ {:07d}".format(4)
+Definindo data
+	"R$ {:02d}/{:02d}".format(9,4)
+
+################################################
+################ Interpolação ##################
+################################################
+
+random = numero randomico
+libraryFunctions.html
+
+## Importando Modulo / sempre no inicio do arquivo
+	comando import random no terminal
+
+## arrendondar
+	round(nomeVar) 
+
+# simbolo comentario
+
+Valor absoluto (sempre positivo)
+	abs()
+
+criando função
+
+def nome_funcao():
+	....
+
+chamando função
+
+	Fazer o import 
+	import forca
+	forca.nome_funcao()
+
+
+Nome variavel pra ver se o arquivo está setado ou importado
+if(_name_ == "_main_")
+
+
+=======================================
+	=======================================
+		Python3 - Curso Alura / Parte 2
+	=======================================
+=======================================
+
+Criar var boolean
+	nomeVar = false / true
+Usar o not quando for fazer uma negação no lugar de (!)
+	if(not nomeVar):
+		...
+
+Buscar lentra dentro da palavra retorna a possição
+	nomevar.find("b")
+	nomevar.find("c")
+
+	for letra in palavra:
+		...
+
+Mormalização de maiusculas e minusculas
+	nomeVar.lower()
+	nomeVar.upper()
+
+Retirar espaços
+	nomeVar.strip()
+
+Criar lista 
+	nomeLista = []
+	nomeLista = [0,1,2,3,'x']
+
+Buscar valor dentro da lista retorna um boolean 
+	6 in nomeLista
+	'b' in 'banana'
+	min(nomeLista) funciona somente com typos iguais dentro da lista
+	max(nomeLista) valor maximo
+	len(nomeLista) tamanho
+	nomeLista.append() adiciona valor
+	nomeLista.pop() remove o ultimo valor
+	nomeLista[2] acessar a posição
+
+Criar Range 
+	serie = range(0,10)
+
+Tuple é uma lista que não muda seus valores, valor envolvido por ()
+	dias = ('s', 't', 'q', 'q', 's', 's', 'd')
+	
+Converter para tuple
+	nova = tuple(valores)
+Converter para lista
+	nova = list(nova)
+
+imcrementação += 1
+var.upper()
+
+acertou = "_" not in letras_acertadas
+
+lista = ['_' for letra in palavra]
+
+
+===========================================
+
+Trabalhando com arquivos
+
+Abrir arquivo modo escrita w criar, a adicionar no arquivo
+ 	nomeDoArquivo = open('nomeArquivo.txt', 'w') criar arquivo
+	nomeDoArquivo.write("escreva aqui")
+	nomeDoArquivo.close()
+
+	nomeDoArquivo = open('nomeArquivo.txt', 'a') adicionar informações
+	nomeDoArquivo.write("escreva aqui\n") \n pular linha
+	nomeDoArquivo.close()
+
+	nomeDoArquivo = open('nomeArquivo.txt', 'r') modo leitura
+	nomeDoArquivo.read() ler arquivo inteiro
+
+	nomeDoArquivo = open("nomeArquivo.txt", 'r')
+	linha = nomeDoArquivo.readline() -- imprime linha por linha 
+
+	for linha in nomeDoArquivo:
+		print(linha, end"\n")
+
+===========================================
+
+import random
+random.randrange(0,4)
+
+
+
+=======================================
+	=======================================
+		Python3 - Curso Alura / Parte 3
+	=======================================
+=======================================
+
+	from nomeDoArquivo import nomeFuncao
+	conta = {'numero': 123, 'titular': 'joao', 'saldo': 55.6, 'limite': 1000.0}
+	print('Seu saldo é {}'.format(conta['saldo']))
+
+
+class Conta:
+	pass
+
+
+conta = Conta()
+	
+	== função contrutora == self é a referencia do obj ==
+	
+	def __ini__(self):    
+		print('Construindo obj ... {}'.format(self))
+		self.numero = 123
+		self.titulo = "Nico"
+		self.saldo = 55.0
+		self.limite = 1000.0
+
+	def __ini__(self, numero, titular, saldo, limite):    
+		print('Construindo obj ... {}'.format(self))
+		self.numero = numero
+		self.titulo = titular
+		self.saldo = saldo
+		self.limite = limite
+
+	conta = Conta(123, 'Nico', 55.0, 1000.0)
+	conta2 = Conta(321, 'Nico2', 55.5, 1000.0)
+
+	def extrato(self):
+		print('Saldo de {} do titular {}'.format(self.saldo, self.titular))
+
+	conta.extrato()
+	conta2.extrato()
+
+	def deposita(self, valor):
+		self.saldo += valor
+		
+	def saca(self, valor):
+		self.saldo -= valor
+		
+	conta.deposita(15.0)
+	conta.saca(50.0)
+
+
+Tira a referencia da variavel
+	nomeVar = none
+
+	__ Adicionar anteas da var para transformar essa em private
+	__var
+
+	def transfere(self, valor, destino):
+		self.saca(valor)
+		destino.deposita(valor)
+
+	def pega_saldo(self):
+		return self.__saldo
+
+
+
+class Cliente
+
+	def __init__(self, nome):
+		self.__nome = nome
+
+Isso é um GET do python
+
+	@property 						= configura o metodo como propriedade
+	def nome(self):
+		return self.__nome.title()
+
+title() = primeira letra fica maiuscula
+
+Isso é um SET python
+
+	@nome.setter					= configura um set
+	def nome(self, nome):
+		self.__nome = nome
+
+CRIAR GET USAR @property 
+CRIAR SET USAR @nomePropriedade.setter
+
+	def saca(self, valor):
+		self.saldo -= valor
+
+
+Methodo estatico não depende do objeto da classe
+	@staticmethod
+	def codigo_banco():
+		return '001'
+
+
+=======================================
+	=======================================
+		Python3 - Curso Alura / Parte 4
+	=======================================
+=======================================
+
+Herança / Polimorfismo  ...
+
+	print('Nome aqui com  {var.var}')
+	var.capitalize() = primeira letra maiuscula
+	var.title 		 = Todas as primeiras lentras maiusculas
+	
+	( 2 x _ ) ex : __var private 
+	( 1 x _ ) ex : _var protegida 
+
+
+extender
+
+class Filme(Programa):
+	...
+
+Chamar iniciador da classe mãe
+	super().__init__(nome, ano)
+
+
+
+hasattr verifica se tem atributo dentro do objeto
+	for programa in filmes_e_series:
+		detalhes =  programa.duracao if hasattr(programa, 'diracao') else programa.temporadas
+		print(programa.nome - {detalhes})
+
+
+Converter para string
+	str(var)
+
+Metodo para imprimir dados da class
+
+	def __str__(self):
+		return f'{self.nome} - {self.texto}'
+
+	print(programa)
+
+Contar uma lista 
+	len(lista)
+
+print(f'Ta ou não tá ' {demolidor in playlist})
+
+
+Transformar classe em INTERABLE
+
+	def __getitem__(self, item):
+		return self._programas[item]		
+
+
+== COMPOSIÇÂO
+
+User len() direto na classe  ================= Python Data Model ==
+
+	def __len__(self):
+		return len(self.programas)
+
+
+
+== Herança mutipla
+
+	class Pleno(Alura, Caelum):
+		pass
+
+
+Classe criada apenas com uma logica basica, não estanciar obj
+	class mixim 
+
+
+
+
+
+
+===========================================
+	===========================================
+		Python3 - Curso Alura / Parte 4 / TDD 
+	===========================================
+===========================================
+
+	Bibliotecas
+		unittest
+		pytest
+
+
+
+import sys
+
+	sys.float_info.min  = menor numero disponivél 
+	sys.float_info.max  = maior numero disponivél 
+
+ctrl + shift + t = Em cima do nome da class atalho criar test
+
+menor_valor_esperado = 100.0
+maior_valor_esperado = 150.0
+
+self.assertEqual(menor_valor_esperado, avaliador_menor_valor)
+self.assertEqual(maior_valor_esperado, avaliador_maior_valor)
+
+Metodo setUp cria o cerario, roda ao rodar o teste
+
+Devolver um copia da lista 
+
+	@property
+	def lances(self):
+		return self.__lances[:]
+
+Pegar ultimo resultado
+	self.__lance[-1]
+
+Lançar exeção
+
+	raise ValueError("Mensagem ...")
+
+	try:
+		self.fail(msg='mensagem')
+	except ValueError:
+		...
+
+
+	with self.assertRaises(ValueError):
+		...
+
+
+==
+== Instalando a biblioteca pytest
+== Dentro da pasta com o prompt de comando 
+	
+	pip install pytest
+
+Criar pasta test/ no mesmo nivel de src/
+
+	test_nome_do_teste.py
+
+
+Como o pytest cria somente as funções, não precisa criar classe
+
+	
+	def test_deve_subtrair_valor_da_carteira_do_usuario_quando_este_propor_um_lance():
+		
+		vini = Usuario('Vini', 100.0)
+		leilao = Leilao('Celular')
+		vini.propoe_lance(leilao, 50.0)
+		assert vini.carteira == 50.0
+
+Rodar pytest na pasta do projeto com o comando
+	pytest
+
+
+	with pytest.raises(ValueError):
+		....
+
+
+
+Decorar com o @pytest.fixture, consegue add em outras funções.
+
+	@pytest.fixture
+	def vini():
+		return Usuario('Vini', 100.0)
+
+	def test_deve_subtrair_valor_da_carteira_do_usuario_quando_este_propor_um_lance(vini):
+			
+		leilao = Leilao('Celular')
+		vini.propoe_lance(leilao, 50.0)
+		assert vini.carteira == 50.0
+
+
+class LanceInvalido(Exception):
+	pass
+
+
+
+===============================================
+	===============================================
+		Flask com Python - Curso Alura / Parte 1 
+	===============================================
+===============================================
+
+Flask => Micro FrameWork
+
+Instalando Flask
+	pip3 install flask==0.12.2 
+
+Primeira pagina
+
+	from flask import Flask, render_template, request, redirect, session, flash, url_for
+
+		app = Flask(__name__)
+		app.secret_key = 'Alura'
+
+		jogo1 = jogo('jogo1', 'Ação', 'SNES')
+		jogo2 = jogo('jogo2', 'Ação', 'SNES')
+		lista = [jogo1, jogo2]
+
+
+		//@app.route('/index')
+		@app.route('/')
+		def index():
+			
+			//return '<h1>Hello Word!</h1>'
+			//return render_template('nome_da_pagina') 
+			//return render_template('nome_da_pagina', title='Jogos')
+			
+			//lista = ['Jogo1', 'Jogo2', 'Jogo3']
+			//return render_template('nome_da_pagina', title='Jogos', jogos=lista) 
+
+			//jogo1 = jogo('jogo1', 'Ação', 'SNES')
+			//jogo2 = jogo('jogo2', 'Ação', 'SNES')
+			//lista = [jogo1, jogo2]
+
+			return render_template('nome_da_pagina.html', title='Jogos', jogos=lista) 
+
+		@app.route('/novo')
+		def novo():
+			if 'usuario_logado' not in session or session['usuario_logado'] == none:
+				//return redirect('login')
+				//return redirect('login?proximo=novo')
+				return redirect(url_for('login', proxima=url_for('novo')))
+			return render_template('novo.html')
+
+		@app.route('/criar', methods=['POST',])
+		def criar():
+			nome =  request.form['nome']
+			categoria =  request.form['categoria']
+			console =  request.form['console']
+			jogo = jogo(nome, categoria, console)
+			lista.append(jogo)
+			
+			//return render_template('lista.html', titulo="Jogos", jogos=lista)
+			
+			//return redirect('/')
+			return redirect(url_for(index)) 
+
+		@app.route('/login')
+		def login():
+			proxima = request.args.get('proxima')
+			return render_template('login.html', proxima=proxima)
+
+		@app.route('/autenticar', methods=['POST',])
+		def autenticar():
+
+
+			if request.form['usuario' in usuarios]:
+				usuario - usuarios[request.form['usuario']]
+				if usuario.senha == request.form['senha']:
+					session['usuario_logado'] = usuario.id
+					flash(usuario.nome + 'logou com sucesso!')
+					proxima_pagina = request.form['proxima']
+					return redirect('proxima_pagina')
+			else
+				flash('Não logado, tente novamente!')
+
+			/********************************************
+
+			if 'mestra' == resquest.form['senha']:
+				session['usuario_logado'] = request.form['usuario']
+				flash(request.form['usuario'] + ' logou com sucesso!')
+				proximaPagina = request.form['proxima']
+				//return redirect('/{}'.format(proximaPagina))
+
+				return redirect(proximaPagina)
+			else
+				flash('Não logado, tente novamente!')
+				//return redirect('/login')
+
+				return redirect(url_for('login'))
+
+			*///////////////////////////////////////////////////
+
+		@app.route('/logout')
+		def logout():
+			session['usuario_logado'] = none
+			flash('Nenhum usuário logado')
+			
+			//return redirect('/')
+			return redirect(url_for('index'))
+
+		//app.run()
+		app.run(debug=True) = loading auto ao modificar o codigo
+
+
+
+	class Jogo:
+		def __init__(self, nome, categoria, console)
+			self.nome = nome
+			self.categoria = categoria
+			self.console = console
+
+	class Usuario:
+		def __init__(self, id, nome, senha):
+			self.id = id
+			self.nome = nome
+			self.senha = senha
+		
+	usuario1 = Usuario('luan', 'Luan Marquez', '1234')
+	usuario2 = Usuario('fulano', 'Fulano Marquez', '43231')
+	usuario3 = Usuario('flavio', 'Flavio Marquez', '1212')
+
+Dicionario
+
+	usuarios = {usuario1.id: usuario1, usuario2.id: usuario2, usuario3.id: usuario3}
+
+Html dentro de /templates
+
+adicionar conteudo no html
+
+	<h1>{{ nomeVar }}</h1>
+
+	{% for jogo in jogos %}
+		
+		<tr>
+			<td> {{ jogo.nome }} </td>
+			<td> {{ jogo.categoria }} </td>
+			<td> {{ jogo.console }} </td>
+		</tr>
+
+	{% endfor %}
+
+
+novo.html
+
+	//<form action="/criar" method="post">
+	<form action="{{ url_for('criar') }}" method="post">
+		<input type="text" name="nome">
+		<input type="text" name="categoria">
+		<input type="text" name="console">
+		<button>Salvar</button>
+	</form>
+
+login.html
+
+	// <form action="/autenticar" method="post">
+	<form action="{{ url_for('autenticar') }}" method="post">
+		//<input type="hidden" name="proxima" value="{{ proxima or '/' }}">
+		<input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+		<input type="text" name="nome">
+		<input type="text" name="senha">
+		<button>Logar</button>
+	</form>
+
+
+Adicionando CSS (Bootstrap), criar pasta /static no nivel /templates
+adicionar link no html 
+	
+	//href="../static/bootstrap.css" 
+	href="{{ url_for('static', filename='bootstrap.css') }}" 
+	
+Resolver duplicação HEAD do html
+	
+template.html
+
+	<html>
+	<head>
+	</head>
+	
+		<body>
+		
+			{% block conteudo %} 
+			{% endblock %}
+
+		<body>
+
+	</html>
+
+filhaTemplate.html
+
+	== adicionar codigo que exibe mensagem do flash / verificar na documentação do flash == 
+
+	{% extends 'template.html' %}
+	{% block conteudo %} conteudo nome que vc dá
+	
+		<div> ... </div>
+	
+	{% endblock %}
+
+
+Autenticação
+
+
+
+
+
+
+===============================================
+	===============================================
+		Flask com Python - Curso Alura / Parte 2 
+	===============================================
+===============================================
+
+MySql
+
+Instalando Mysql
+	pip3 install flask-mysqldb 
+
+Conectar 
+	import MySQLdb
+	conn - MySQKdb.connect(user='root', passwd='admin', db='jogoteca', host='127.0.0.1', port='3306')
+
+Inserção no DB
+	cursor = conn.cursor()
+	cursor.execute('INSERT INTO usuario(id, nome, senha) VALUES (%s, %s, %s)', ('luan', 'Luan Marques', 'flask'))
+	conn.commit()
+
+Inserir varios
+	cursor.executemany('INSERT INTO usuario(id, nome, senha) VALUES (%s, %s, %s)', 
+						[
+							('luan', 'Luan Marques', 'flask'),
+							('nico', 'Nico', '7a1'),
+							('danilo', 'Danilo', 'vegas')
+						])
+
+Listar 
+	cursor.execute('SELECT name from usuario') for usuario in cursor.fetchall(); 
+	print(usuario[0])
+
+
+Ultilizando DB
+
+	from dao import JogoDao
+	form flask_mysqldb import MySQL
+
+	app.config['MYSQK_HOST'] = "0.0.0.0"
+	app.config['MYSQK_USER'] = "root"
+	app.config['MYSQK_PASSWORD'] = "admin"
+	app.config['MYSQK_DB'] = "jogoteca"
+	app.config['MYSQK_PORT'] = 3306
+
+	db = MySQL(app)
+
+	jogo_dao = JogoDao(db)
+
+
+------ Aula 13mim 	parte 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
