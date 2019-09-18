@@ -738,6 +738,25 @@ Ultilizando DB
 
 
 
+=================================================
+	=================================================
+		Python - Curso Alura / Manipulando Strings 
+	=================================================
+=================================================
+
+sobreMim = 'miu nome é rodrigues e minha idade é 26'
+meuNome = 'Rodrigo'
+
+subString = meuNome[4]
+subString = meuNome[2:6]
+subString = meuNome[:6]
+subString = meuNome[4:]
+
+
+
+# vai printar o i 
+
+
 
 
 
